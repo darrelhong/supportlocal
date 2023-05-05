@@ -24,7 +24,9 @@
   </div>
 </header>
 
-<slot />
+<div class="prose mx-auto p-2">
+  <slot />
+</div>
 
 <footer class="footer">
   {#if !PUBLIC_HIDE_DEV_BANNER}
