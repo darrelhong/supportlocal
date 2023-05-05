@@ -2,6 +2,8 @@
   import '../app.css';
   import { themeStore, toggleTheme } from '$lib/dark-mode';
   import { Sun, SunFilled } from '$lib/icons';
+  import { PUBLIC_HIDE_DEV_BANNER } from '$env/static/public';
+  console.log(PUBLIC_HIDE_DEV_BANNER);
 
   let theme = '';
   themeStore.subscribe((value) => (theme = value));
@@ -23,3 +25,11 @@
 </header>
 
 <slot />
+
+<footer class="footer">
+  {#if !PUBLIC_HIDE_DEV_BANNER}
+    <div class="w-full bg-error">
+      <p class="text-xs">This site is currently in development. Data may not be accurate</p>
+    </div>
+  {/if}
+</footer>
