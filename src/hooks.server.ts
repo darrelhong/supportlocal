@@ -6,6 +6,6 @@ export const handle = (async ({ event, resolve }) => {
   return await resolve(event, {
     // dark mode ssr
     transformPageChunk: ({ html }) =>
-      cookieTheme === 'dark' ? html.replace('data-theme=""', 'data-theme="dark"') : html
+      cookieTheme === 'dark' ? html.replace('data-theme="light"', 'data-theme="dark"') : html
   });
 }) satisfies Handle;

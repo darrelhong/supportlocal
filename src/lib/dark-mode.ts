@@ -8,14 +8,13 @@ export const themeStore = writable(
 export const toggleTheme = async () => {
   let theme = document.documentElement.getAttribute('data-theme');
   if (theme === 'dark') {
-    document.documentElement.removeAttribute('data-theme');
-    theme = '';
-    themeStore.set(theme);
+    theme = 'light';
   } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
     theme = 'dark';
-    themeStore.set(theme);
   }
+  themeStore.set(theme);
+  document.documentElement.setAttribute('data-theme', theme);
+
   await fetch('/api/set-theme', {
     method: 'PUT',
     headers: {

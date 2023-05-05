@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* The hack for Safari */
+    min-height: -webkit-fill-available;
+  }
+}
