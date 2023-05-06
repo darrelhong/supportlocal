@@ -4,10 +4,6 @@
   import { Sun, SunFilled } from '$lib/icons';
   import { PUBLIC_HIDE_DEV_BANNER } from '$env/static/public';
   import MenuIcon from '$lib/icons/menu-icon.svelte';
-  console.log(PUBLIC_HIDE_DEV_BANNER);
-
-  let theme = '';
-  themeStore.subscribe((value) => (theme = value));
 </script>
 
 <header
@@ -16,16 +12,12 @@
   <div class="container mx-auto my-auto flex items-center gap-2">
     <a href="/" class="text-2xl font-bold text-red-500">#supportlocal</a>
     <button class="ml-auto grid" on:click={toggleTheme}>
-      <Sun
-        class={`col-start-1 row-start-1 transition-transform duration-300 ${
-          theme === 'dark' ? 'rotate-0 opacity-0' : 'rotate-45'
-        }`}
-      />
-      <SunFilled
-        class={`col-start-1 row-start-1 transition-transform duration-300 ${
-          theme === 'light' ? ' rotate-45 opacity-0' : 'rotate-0'
-        }`}
-      />
+      <span class="sun sun-normal">
+        <Sun />
+      </span>
+      <span class="sun sun-filled">
+        <SunFilled />
+      </span>
     </button>
     <div class="dropdown-end dropdown">
       <button class="btn-ghost btn-sm btn">
@@ -49,3 +41,26 @@
     </div>
   {/if}
 </footer>
+
+<style>
+  .sun {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    transition: rotate 300ms, opacity 150ms;
+  }
+
+  :global(html[data-theme='dark']) .sun-filled {
+    opacity: 0;
+    rotate: 0;
+  }
+  :global(html[data-theme='dark']) .sun-filled {
+    rotate: 45deg;
+  }
+
+  :global(html[data-theme='light']) .sun-normal {
+    opacity: 0;
+  }
+  :global(html[data-theme='light']) .sun-normal {
+    rotate: -45deg;
+  }
+</style>
