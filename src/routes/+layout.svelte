@@ -23,7 +23,9 @@
       <button class="btn-ghost btn-sm btn">
         <MenuIcon />
       </button>
-      <ul class="dropdown-content menu rounded-box mt-4 w-52 bg-base-100 p-2 shadow">
+      <ul
+        class="dropdown-content menu mt-4 w-52 rounded-2xl bg-neutral-50 p-1 shadow dark:bg-neutral-700"
+      >
         <li><a href="/biz/login">Business login</a></li>
       </ul>
     </div>
