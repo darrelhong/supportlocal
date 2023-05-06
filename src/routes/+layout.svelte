@@ -3,6 +3,7 @@
   import { themeStore, toggleTheme } from '$lib/dark-mode';
   import { Sun, SunFilled } from '$lib/icons';
   import { PUBLIC_HIDE_DEV_BANNER } from '$env/static/public';
+  import MenuIcon from '$lib/icons/menu-icon.svelte';
   console.log(PUBLIC_HIDE_DEV_BANNER);
 
   let theme = '';
@@ -12,7 +13,7 @@
 <header
   class="min-h-12 sticky top-0 flex items-center bg-base-100 px-2 py-1 shadow dark:shadow-neutral-900/60"
 >
-  <div class="container mx-auto my-auto flex items-center">
+  <div class="container mx-auto my-auto flex items-center gap-2">
     <a href="/" class="text-2xl font-bold text-red-500">#supportlocal</a>
     <button class="ml-auto grid" on:click={toggleTheme}>
       <Sun
@@ -26,6 +27,14 @@
         }`}
       />
     </button>
+    <div class="dropdown-end dropdown">
+      <button class="btn-ghost btn-sm btn">
+        <MenuIcon />
+      </button>
+      <ul class="dropdown-content menu rounded-box mt-4 w-52 bg-base-100 p-2 shadow">
+        <li><a href="/biz/login">Business login</a></li>
+      </ul>
+    </div>
   </div>
 </header>
 
