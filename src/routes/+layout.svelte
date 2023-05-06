@@ -14,12 +14,17 @@
 >
   <div class="container mx-auto my-auto flex items-center">
     <a href="/" class="text-2xl font-bold text-red-500">#supportlocal</a>
-    <button class="ml-auto" on:click={toggleTheme}>
-      {#if theme === 'dark'}
-        <Sun />
-      {:else}
-        <SunFilled />
-      {/if}
+    <button class="ml-auto grid" on:click={toggleTheme}>
+      <Sun
+        class={`col-start-1 row-start-1 transition-transform duration-300 ${
+          theme === 'dark' ? 'rotate-0 opacity-0' : 'rotate-45'
+        }`}
+      />
+      <SunFilled
+        class={`col-start-1 row-start-1 transition-transform duration-300 ${
+          theme === 'light' ? ' rotate-45 opacity-0' : 'rotate-0'
+        }`}
+      />
     </button>
   </div>
 </header>
