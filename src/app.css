@@ -14,3 +14,13 @@ body {
     min-height: -webkit-fill-available;
   }
 }
+
+@layer components {
+  form label {
+    @apply font-semibold dark:text-neutral-300;
+  }
+
+  .input-custom {
+    @apply h-12 rounded-xl border-0 bg-base-100 px-3 py-2 ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:ring-neutral-600 dark:placeholder:text-neutral-500 dark:focus:ring-primary;
+  }
+}
