@@ -6,7 +6,7 @@
   $: ({ supabase } = data);
 </script>
 
-<h2>Login as business owner</h2>
+<h2>Sign up as business owner</h2>
 
 <form
   class="sm:w-96"
@@ -29,7 +29,9 @@
     <label for="email">Email</label>
     <input type="email" id="email" name="email" required class="input-custom w-full" />
   </div>
-  <button class="btn-primary btn mt-4">Get login link</button>
+  <button class="btn-primary btn mt-4">Get verify email link</button>
 </form>
 
-<a href="/biz/signup" class="mt-8 inline-block text-sm text-neutral">Sign up as business owner</a>
+<a href="/biz/login" class="mt-8 inline-block text-sm text-neutral"
+  >Already have and account? Click here to sign in</a
+>
