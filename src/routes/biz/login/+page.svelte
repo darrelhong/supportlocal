@@ -4,6 +4,9 @@
   export let data: PageData;
 
   $: ({ supabase } = data);
+
+  let isError = false;
+  let message = '';
 </script>
 
 <h2 class="mt-2">Login as business owner</h2>
@@ -20,9 +23,17 @@
       return;
     }
 
-    const { data, error } = await supabase.auth.signInWithOtp({ email });
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options: { emailRedirectTo: `${window.location.origin}/biz/logging-in` }
+    });
 
-    console.log({ data, error });
+    if (error) {
+      isError = true;
+      message = 'An error occurred. Please try again later.';
+    } else {
+      message = "We've sent you a login link. Please click on it to login.";
+    }
   }}
 >
   <div class="grid">
@@ -30,6 +41,7 @@
     <input type="email" id="email" name="email" required class="input-custom w-full" />
   </div>
   <button class="btn-primary btn mt-4">Get login link</button>
+  <p class={`text-sm ${isError ? 'text-error' : 'text-success'}`}>{message}</p>
 </form>
 
 <a href="/biz/signup" class="mt-8 inline-block text-sm text-neutral">Sign up as business owner</a>
