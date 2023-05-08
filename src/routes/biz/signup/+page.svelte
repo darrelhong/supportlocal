@@ -7,6 +7,7 @@
   $: ({ supabase } = data);
 
   let errorMessage = '';
+  let loading = false;
 </script>
 
 <h2 class="mt-2">Sign up as business owner</h2>
@@ -14,6 +15,7 @@
 <form
   class="sm:w-96"
   on:submit|preventDefault={async (e) => {
+    loading = true;
     const formData = new FormData(e.currentTarget);
 
     const email = formData.get('email');
@@ -25,8 +27,10 @@
 
     const { error } = await supabase.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: `${window.location.origin}/biz/logging-in` }
+      options: { emailRedirectTo: `${window.location.origin}/biz/logging-in?signup=true` }
     });
+
+    loading = false;
 
     if (error) {
       errorMessage = 'An error occurred. Please try again later.';
@@ -39,7 +43,7 @@
     <label for="email">Email</label>
     <input type="email" id="email" name="email" required class="input-custom w-full" />
   </div>
-  <button class="btn-primary btn mt-4">Get verify email link</button>
+  <button class="btn-primary btn mt-4" class:loading>Get verify email link</button>
   {#if errorMessage}
     <p class="text-sm text-error">{errorMessage}</p>
   {/if}
