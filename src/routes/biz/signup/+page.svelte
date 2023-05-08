@@ -1,12 +1,15 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import { goto } from '$app/navigation';
 
   export let data: PageData;
 
   $: ({ supabase } = data);
+
+  let errorMessage = '';
 </script>
 
-<h2>Sign up as business owner</h2>
+<h2 class="mt-2">Sign up as business owner</h2>
 
 <form
   class="sm:w-96"
@@ -20,9 +23,16 @@
       return;
     }
 
-    const { data, error } = await supabase.auth.signInWithOtp({ email });
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options: { emailRedirectTo: `${window.location.origin}/biz/home` }
+    });
 
-    console.log({ data, error });
+    if (error) {
+      errorMessage = 'An error occurred. Please try again later.';
+    } else {
+      goto('/biz/signup/success');
+    }
   }}
 >
   <div class="grid">
@@ -30,6 +40,9 @@
     <input type="email" id="email" name="email" required class="input-custom w-full" />
   </div>
   <button class="btn-primary btn mt-4">Get verify email link</button>
+  {#if errorMessage}
+    <p class="text-sm text-error">{errorMessage}</p>
+  {/if}
 </form>
 
 <a href="/biz/login" class="mt-8 inline-block text-sm text-neutral"

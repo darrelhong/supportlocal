@@ -6,7 +6,7 @@
   $: ({ supabase } = data);
 </script>
 
-<h2>Login as business owner</h2>
+<h2 class="mt-2">Login as business owner</h2>
 
 <form
   class="sm:w-96"
