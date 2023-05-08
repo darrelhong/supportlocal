@@ -36,3 +36,20 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+# Documentation
+
+## Authentication
+
+Sign up/login with `@supabase/auth-helpers-sveltekit` and magic links
+
+Supabse server client instantiated in `hooks.server.ts` and browser client in `routes/biz/+layout.ts`.
+
+### Auth flow
+
+- ` supabase.auth.signInWithOtp` called on client side, which sends verification email
+- link redirects to `biz/logging-in`, which receives session data from `routes/biz/+layout.server.ts`
+- cookie is set by browser Supabase client
+- user is redirected `/biz/dashboard`
+
+Auth flow is identical for sign up and login, except that signup will create a new user in Supabase.
