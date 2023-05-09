@@ -16,7 +16,7 @@ export default {
           secondary: '#7b5ea7',
           accent: '#f38ba3',
           neutral: '#12b4e5',
-          'base-100': '#ffffff',
+          'base-100': '#fefaf5',
           error: colors.red[400],
           '--rounded-btn': '1.9rem',
           '--btn-text-case': 'none'
