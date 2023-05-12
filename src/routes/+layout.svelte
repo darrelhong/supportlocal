@@ -1,6 +1,6 @@
 <script>
   import '../app.css';
-  import { themeStore, toggleTheme } from '$lib/dark-mode';
+  import { toggleTheme } from '$lib/dark-mode';
   import { Sun, SunFilled } from '$lib/icons';
   import { PUBLIC_HIDE_DEV_BANNER } from '$env/static/public';
   import MenuIcon from '$lib/icons/menu-icon.svelte';
