@@ -2,7 +2,7 @@
   import '../app.css';
   import { toggleTheme } from '$lib/dark-mode';
   import { Sun, SunFilled } from '$lib/icons';
-  import { PUBLIC_HIDE_DEV_BANNER } from '$env/static/public';
+  import { PUBLIC_DEV_BANNER_MESSAGE } from '$env/static/public';
   import MenuIcon from '$lib/icons/menu-icon.svelte';
 </script>
 
@@ -37,9 +37,9 @@
 </div>
 
 <footer class="footer">
-  {#if !PUBLIC_HIDE_DEV_BANNER}
+  {#if PUBLIC_DEV_BANNER_MESSAGE}
     <div class="w-full bg-error">
-      <p class="text-xs">This site is currently in development. Data may not be accurate</p>
+      <p class="text-xs">{PUBLIC_DEV_BANNER_MESSAGE}</p>
     </div>
   {/if}
 </footer>
