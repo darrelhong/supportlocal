@@ -1,6 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
 
-import type { SupabaseClient } from '@supabase/supabase-js';
+import type { Session, SupabaseClient } from '@supabase/supabase-js';
 // generate with supabase gen types typescript --local > src/database.types.ts
 import type { Database } from './database.types';
 
@@ -10,6 +10,7 @@ declare global {
     // interface Error {}
     interface Locals {
       supabase: SupabaseClient<Database>;
+      getSession: () => Promise<Session | null>;
     }
     // interface PageData {}
     // interface Platform {}

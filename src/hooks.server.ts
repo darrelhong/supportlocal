@@ -9,6 +9,14 @@ export const handle = (async ({ event, resolve }) => {
     event
   });
 
+  // helper function to get session
+  event.locals.getSession = async () => {
+    const {
+      data: { session }
+    } = await event.locals.supabase.auth.getSession();
+    return session;
+  };
+
   // protect biz/dashboard routes
   if (event.url.pathname.startsWith('/biz/dashboard')) {
     const session = (await event.locals.supabase.auth.getSession()).data.session;
