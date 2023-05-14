@@ -30,15 +30,17 @@
   <a href="dashboard/create" class="btn-neutral btn">Create new listing</a>
 </div>
 
-<div class="grid gap-2 sm:grid-cols-2">
+<div class="gap-2 sm:columns-2 sm:grid-cols-2">
   {#each Array(10).fill(0) as _, i}
     <div
-      class="overflow-hidden rounded-md border-2 border-black pb-2 prose-img:m-0 dark:border-white sm:border-2"
+      class="mb-2 overflow-hidden rounded-md border-2 border-black pb-2 prose-img:m-0 dark:border-white sm:border-2"
     >
       <img
-        src="https://picsum.photos/seed/${i}/400/300"
+        src="https://picsum.photos/seed/{i + 1}/{Math.floor(
+          Math.random() * (500 - 200) + 200
+        )}/{Math.floor(Math.random() * (400 - 300) + 300)}"
         alt="Listing"
-        class="max-h-48 w-full object-cover"
+        class="w-full object-cover"
       />
       <div class="px-2 pt-2 prose-h3:m-0 prose-p:leading-5">
         <h3 class="text-xl font-semibold">Listing title</h3>
