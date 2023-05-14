@@ -9,7 +9,7 @@ create table listings (
   description_short varchar(35) not null check (description_short <> ''),
   description_long text,
   website_url varchar(140),
-  google_maps_url text,
+  google_maps_url varchar(300),
   hero_image_url text,
   proof_of_ownership_doc_url text,
   images text []
