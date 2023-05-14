@@ -44,11 +44,13 @@ update using (auth.uid() = profile_id);
 --
 --
 insert into storage.buckets (id, name)
-values ('listings', 'listings');
+values ('listing-images', 'listing-images');
+--
+update storage.buckets set public = true where id = 'listing-images';
 --
 create policy "Users can upload listing images under subfolder of name equals listing id" on storage.objects for
 insert with check (
-    bucket_id = 'listings'
+    bucket_id = 'listing-images'
     and auth.uid() = (
       select profile_id
       from listings
