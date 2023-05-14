@@ -7,7 +7,7 @@
 </script>
 
 <header
-  class="min-h-12 sticky top-0 flex items-center border-b-2 border-black bg-base-100 px-2 py-1 dark:border-white"
+  class="min-h-12 sticky top-0 z-10 flex items-center border-b-2 border-black bg-base-100 px-2 py-1 dark:border-white"
 >
   <div class="container mx-auto my-auto flex items-center gap-2">
     <a href="/" class="text-2xl font-bold text-red-500">#supportlocal</a>
@@ -32,7 +32,7 @@
   </div>
 </header>
 
-<div class="prose mx-auto w-full p-2 sm:px-0">
+<div class="prose mx-auto w-full p-2 md:px-0">
   <slot />
 </div>
 
