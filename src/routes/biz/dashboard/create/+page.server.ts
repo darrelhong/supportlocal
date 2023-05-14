@@ -125,6 +125,6 @@ export const actions = {
       });
     }
 
-    return { success: true };
+    throw redirect(303, `/biz/dashboard`);
   }
 } satisfies Actions;

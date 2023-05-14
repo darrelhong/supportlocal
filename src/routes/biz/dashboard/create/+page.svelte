@@ -15,11 +15,8 @@
   use:enhance={() => {
     loading = true;
 
-    return async ({ update, result }) => {
+    return async ({ update }) => {
       await update();
-      if (result.type === 'success') {
-        goto('/biz/dashboard');
-      }
       loading = false;
     };
   }}
