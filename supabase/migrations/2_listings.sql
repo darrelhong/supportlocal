@@ -26,6 +26,9 @@ select using (
     and auth.uid() = profile_id
   );
 --
+create policy "Disabled listings are not viewable." on listings as restrictive for
+select using (enabled = true);
+--
 create policy "Users can insert up to their listing limit." on listings for
 insert with check (
     (
