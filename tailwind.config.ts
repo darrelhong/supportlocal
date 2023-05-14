@@ -24,7 +24,7 @@ export default {
         dark: {
           'color-scheme': 'dark',
           primary: '#fcb928',
-          secondary: '#7b5ea7',
+          secondary: '#886eaf',
           accent: '#f38ba3',
           neutral: '#12b4e5',
           error: colors.red[500],

@@ -32,7 +32,7 @@
   </div>
 </header>
 
-<div class="prose mx-auto p-2">
+<div class="prose mx-auto w-full p-2 sm:px-0">
   <slot />
 </div>
 
