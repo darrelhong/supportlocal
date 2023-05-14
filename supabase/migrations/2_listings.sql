@@ -16,3 +16,27 @@ create table listings (
 );
 --
 alter table listings enable row level security;
+create policy "Verified listings are viewable by everyone." on listings for
+select using (verified = true);
+--
+create policy "Users can view own unverified listings." on listings for
+select using (
+    verified = false
+    and auth.uid() = profile_id
+  );
+--
+create policy "Users can insert up to their listing limit." on listings for
+insert with check (
+    (
+      select count(*)
+      from listings
+      where profile_id = auth.uid()
+    ) < (
+      select listing_limit
+      from profiles
+      where id = auth.uid()
+    )
+  );
+--
+create policy "Users can update own listings." on listings for
+update using (auth.uid() = profile_id);
