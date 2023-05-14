@@ -16,6 +16,7 @@ create table listings (
 );
 --
 alter table listings enable row level security;
+--
 create policy "Verified listings are viewable by everyone." on listings for
 select using (verified = true);
 --
@@ -40,3 +41,31 @@ insert with check (
 --
 create policy "Users can update own listings." on listings for
 update using (auth.uid() = profile_id);
+--
+--
+insert into storage.buckets (id, name)
+values ('listings', 'listings');
+--
+create policy "Users can upload listing images under subfolder of name equals listing id" on storage.objects for
+insert with check (
+    bucket_id = 'listings'
+    and auth.uid() = (
+      select profile_id
+      from listings
+      where cast(listings.id as TEXT) = (storage.foldername(name)) [1]
+    )
+  );
+--
+--
+insert into storage.buckets (id, name)
+values ('proof-of-ownership', 'proof-of-ownership');
+--
+create policy "Users can upload proof of ownership under subfolder of name equals listing id" on storage.objects for
+insert with check (
+    bucket_id = 'proof-of-ownership'
+    and auth.uid() = (
+      select profile_id
+      from listings
+      where cast(listings.id as TEXT) = (storage.foldername(name)) [1]
+    )
+  );
