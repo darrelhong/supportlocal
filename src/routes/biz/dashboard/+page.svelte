@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { page } from '$app/stores';
   import { onMount } from 'svelte';
-  import type { PageData } from './$types';
+  import { page } from '$app/stores';
+  import { goto } from '$app/navigation';
   import { PUBLIC_SUPABASE_URL } from '$env/static/public';
+  import type { PageData } from './$types';
 
   export let data: PageData;
 
@@ -11,12 +12,10 @@
 
   onMount(() => {
     const params = $page.url.searchParams;
+    // remove signup param from url
     params.delete('signup');
-    history.replaceState(
-      null,
-      '',
-      `${$page.url.pathname}${params.toString() && `?${params.toString()}`}`
-    );
+    if (params.toString()) goto(`?${params.toString()}`);
+    else goto('dashboard');
   });
 </script>
 
