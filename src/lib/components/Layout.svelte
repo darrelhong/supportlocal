@@ -1,5 +1,4 @@
-<script>
-  import '../app.css';
+<script lang="ts">
   import { toggleTheme } from '$lib/dark-mode';
   import { Sun, SunFilled } from '$lib/icons';
   import { PUBLIC_DEV_BANNER_MESSAGE } from '$env/static/public';
@@ -26,7 +25,9 @@
       <ul
         class="dropdown-content menu mt-4 w-52 rounded-2xl bg-neutral-50 p-1 shadow dark:bg-neutral-700"
       >
-        <li><a href="/biz/login">Business login</a></li>
+        <slot name="menu">
+          <li><a href="/biz/login">Business login</a></li>
+        </slot>
       </ul>
     </div>
   </div>

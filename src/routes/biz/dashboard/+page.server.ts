@@ -14,6 +14,7 @@ export const load = (async ({ parent, locals: { supabase } }) => {
   }
 
   return {
-    listings: data
+    listings: data,
+    session
   };
 }) satisfies PageServerLoad;
