@@ -54,7 +54,7 @@
               {#if !listing.verified}
                 <span class="text-sm text-error">Pending approval</span>
               {/if}
-              <a href="edit" class="btn-accent btn-sm btn ms-auto">Edit</a>
+              <a href="" class="btn-accent btn-sm btn ms-auto opacity-50">Edit</a>
             </div>
           </div>
         </div>
