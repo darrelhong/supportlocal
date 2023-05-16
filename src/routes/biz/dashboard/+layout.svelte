@@ -2,8 +2,6 @@
   import { onMount } from 'svelte';
   import { goto, invalidate } from '$app/navigation';
 
-  import '../../../app.css';
-
   import Layout from '$lib/components/Layout.svelte';
   import type { LayoutData } from './$types';
 
