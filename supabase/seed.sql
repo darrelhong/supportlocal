@@ -125,7 +125,7 @@ values (
         'https://goo.gl/maps/tooVYueCzH1hGryr7',
         'https://danielfooddiary.com/wp-content/uploads/2021/06/cafemonochrome20.jpg',
         array ['https://picsum.photos/seed/4/423/312', 'https://picsum.photos/seed/5/320/400', 'https://picsum.photos/seed/6/423/503'],
-        current_timestamp + interval '1 second'
+        current_timestamp - interval '1 second'
     ),
     (
         'b1a503db-0793-4f36-8b58-ac8af8c20648',
@@ -136,7 +136,7 @@ values (
         'https://goo.gl/maps/6Y5Y1Z4Z6Y5Y1Z4Z6',
         'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2047&q=80',
         array ['https://picsum.photos/seed/7/290/340', 'https://picsum.photos/seed/8/534/234', 'https://picsum.photos/seed/9/343/290'],
-        current_timestamp + interval '2 second'
+        current_timestamp - interval '2 second'
     ),
     (
         'b1a503db-0793-4f36-8b58-ac8af8c20648',
@@ -147,7 +147,7 @@ values (
         'https://goo.gl/maps/6Y5Y1Z4Z6Y5Y1Z4Z6',
         'https://i1.wp.com/creamier.com.sg/app/uploads/2019/10/WhatsApp-Image-2019-10-06-at-12.47.51-PM.jpeg?zoom=2&fit=1174%2C877&ssl=1',
         array ['https://media-cdn.tripadvisor.com/media/photo-p/1a/01/75/57/photo1jpg.jpg', 'https://danielfooddiary.com/wp-content/uploads/2016/03/creamier1.jpg'],
-        current_timestamp + interval '3 second'
+        current_timestamp - interval '3 second'
     ),
     (
         'b1a503db-0793-4f36-8b58-ac8af8c20648',
@@ -158,7 +158,7 @@ values (
         'https://goo.gl/maps/FY2cWFujqjW9MeNS9',
         'https://lh3.ggpht.com/p/AF1QipP8yIh2GRJX7qsEqImWeNLVobPFPI31rhxwvrfL=s1536',
         array ['https://cdn.shopify.com/s/files/1/0095/3745/4144/products/essential-oil-essential-oil-bergamot-10ml-5202953273408_1800x.jpg?v=1643139712', 'https://www.capitaland.com/content/dam/capitaland-media-library/retail/Singapore/Singapore/Junction%208/tenant_storefront/HYSSES.jpg.transform/cap-midres/image.jpg'],
-        current_timestamp + interval '4 second'
+        current_timestamp - interval '4 second'
     ),
     (
         'b1a503db-0793-4f36-8b58-ac8af8c20648',
@@ -169,7 +169,7 @@ values (
         null,
         'https://scontent.fsin15-1.fna.fbcdn.net/v/t39.30808-6/327115658_520814699901511_268616325478005554_n.png?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=W4x28xTcGO0AX-9BHRP&_nc_ht=scontent.fsin15-1.fna&oh=00_AfCxD-Ts8d2eCBLhQ3JCPlOkAqhJ3hqfzEh-QshEptNpcA&oe=6464B1D7',
         array ['https://www.gryphontea.com/pub/media/homepage-slider-1.jpg', 'https://www.gryphontea.com/pub/media/homepage-summary-coldbrew.jpg'],
-        current_timestamp + interval '5 second'
+        current_timestamp - interval '5 second'
     ),
     (
         'b1a503db-0793-4f36-8b58-ac8af8c20648',
@@ -180,7 +180,7 @@ values (
         'https://goo.gl/maps/fKmrbNynUycEtoL1A',
         'https://cdn.shopify.com/s/files/1/0365/9110/8140/files/WhatsApp_Image_2021-05-05_at_9.42.32_AM_2048x2048.jpg?v=1620178983',
         array ['https://cdn.shopify.com/s/files/1/0365/9110/8140/files/WhatsApp_Image_2021-05-05_at_9.41.08_AM_2048x2048.jpg?v=1620178896','https://cdn.shopify.com/s/files/1/0365/9110/8140/files/IMG-1026_1024x1024.jpg?v=1683439822', 'https://cdn.shopify.com/s/files/1/0365/9110/8140/files/WhatsApp_Image_2022-06-13_at_11.15.58_PM_600x600.jpg?v=1655133384'],
-        current_timestamp + interval '6 second'
+        current_timestamp - interval '6 second'
     ),
     (
         'b1a503db-0793-4f36-8b58-ac8af8c20648',
@@ -191,7 +191,73 @@ values (
         'https://goo.gl/maps/2UGCDLyZmopCksc69',
         'https://burpple.imgix.net/venue_images/hires_5000px_space_overall_046-min-jpg_6680_original',
         array ['https://cdn.shopify.com/s/files/1/1628/1923/files/TB_250g_Feb23_1512x.jpg?v=1683256413', 'https://cdn.shopify.com/s/files/1/1628/1923/products/07-WEB_1512x.jpg?v=1646977155'],
-        current_timestamp + interval '7 second'
+        current_timestamp - interval '7 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Kele Pineapple Tarts',
+        'Pastry shop',
+        'One of Singapore''s most popular pineapple tart brands, Kele balances tradition with contemporary offerings to appeal to modern consumers with its gift-worthy tarts encased in gold tin cans. ',
+        'https://www.kelepineappletarts.com.sg/',
+        'https://goo.gl/maps/23oE8V5epHxzjuPh7',
+        'https://www.visitsingapore.com/content/dam/vs/made-with-passion/brand-profiles/batch-2/kele/kele-gallery-1-1670x940.jpg',
+        array ['https://www.visitsingapore.com/content/dam/vs/made-with-passion/brand-profiles/batch-2/kele/kele-gallery-2-1670x940.jpg'],
+        current_timestamp - interval '8 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'The Golden Duck',
+        'Snack brand',
+        'The Golden Duck is a Singaporean snack brand that specialises in salted egg yolk snacks. The brand was founded in 2015 by Jonathan Shen and Christopher Hwang, who were inspired by the salted egg yolk trend in Singapore at the time. The Golden Duck''s first product was a salted egg yolk potato chip, which was launched in 2016. The Golden Duck has since expanded its product range to include other salted egg yolk snacks such as salted egg yolk fish skin and salted egg yolk cookies.',
+        'https://www.thegoldenduck.co/',
+        null,
+        'https://dsgcp.com/assets/Uploads/Golden-Duck-snacks__FitMaxWzE1MzAsODAwXQ.jpg',
+        array ['https://eatbook.sg/wp-content/uploads/2019/05/The-Golden-Duck-Ma-la-fish-skin-819x1024.jpg'],
+        current_timestamp - interval '9 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 1',
+        'Random shop type 1',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliqua',
+        'https://example.com',
+        null,
+        'https://picsum.photos/seed/10/500/500',
+        array ['https://picsum.photos/seed/11/500/500', 'https://picsum.photos/seed/12/500/500'],
+        current_timestamp - interval '10 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 2',
+        'Random shop type 2',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliqua',
+        'https://example.com',
+        null,
+        'https://picsum.photos/seed/13/500/500',
+        array ['https://picsum.photos/seed/14/500/500', 'https://picsum.photos/seed/15/500/500'],
+        current_timestamp - interval '11 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 3',
+        'Random shop type 3',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliqua',
+        'https://example.com',
+        null,
+        'https://picsum.photos/seed/16/500/500',
+        array ['https://picsum.photos/seed/17/500/500', 'https://picsum.photos/seed/18/500/500'],
+        current_timestamp - interval '12 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 4',
+        'Random shop type 4',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliqua',
+        'https://example.com',
+        null,
+        'https://picsum.photos/seed/19/500/500',
+        array ['https://picsum.photos/seed/20/500/500', 'https://picsum.photos/seed/21/500/500'],
+        current_timestamp - interval '13 second'
     );
 --
 UPDATE listings
