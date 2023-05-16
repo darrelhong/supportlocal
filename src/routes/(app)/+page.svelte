@@ -4,7 +4,7 @@
 
   export let data: PageData;
 
-  $: ({ listings } = data);
+  $: ({ listings, page } = data);
 </script>
 
 <h2 class="text-center">Discover your favourite local businesses</h2>
@@ -12,8 +12,10 @@
 {#if !listings}
   <p>Failed to load listings</p>
 {:else}
+  <!-- listing grid -->
   <div class="not-prose grid gap-1.5 sm:grid-cols-2 sm:gap-y-3">
-    {#each listings as listing}
+    {#each listings.slice(0, 10) as listing}
+      <!-- listing card -->
       <div class="rounded-md bg-black dark:bg-white">
         <div
           class="h-full overflow-hidden rounded-md border-2 border-black bg-base-100 pb-2 transition-transform hover:-translate-x-1 hover:-translate-y-1 dark:border-white"
@@ -37,5 +39,14 @@
         </div>
       </div>
     {/each}
+  </div>
+  <!-- pagination -->
+  <div class="mt-4 flex">
+    {#if page > 1}
+      <a href="?page={page - 1}" class="btn-secondary btn self-start">Prev page</a>
+    {/if}
+    {#if listings.length > 10}
+      <a href="?page={page + 1}" class="btn-accent btn ms-auto">Next page</a>
+    {/if}
   </div>
 {/if}
