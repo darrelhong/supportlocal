@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --content-padding-x: theme(spacing[2]);
+  --content-padding-y: theme(spacing[2]);
+}
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;

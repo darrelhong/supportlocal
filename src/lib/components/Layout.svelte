@@ -33,7 +33,9 @@
   </div>
 </header>
 
-<div class="prose mx-auto w-full p-2 md:px-0">
+<div
+  class="prose mx-auto w-full px-[var(--content-padding-x)] py-[var(--content-padding-y)] md:px-0"
+>
   <slot />
 </div>
 
