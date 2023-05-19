@@ -27,6 +27,7 @@
       >
         <slot name="menu">
           <li><a href="/biz/login">Business login</a></li>
+          <li><a href="https://github.com/darrelhong/supportlocal">View on GitHub</a></li>
         </slot>
       </ul>
     </div>
