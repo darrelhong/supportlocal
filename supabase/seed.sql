@@ -93,7 +93,7 @@ UPDATE profiles
 SET listing_limit = 20
 WHERE id = 'b1a503db-0793-4f36-8b58-ac8af8c20648';
 --
--- insert 8 mock listings
+-- insert mock listings
 insert into listings (
         profile_id,
         title,
@@ -156,7 +156,7 @@ values (
         'HYSSES offers a wide range of essential oils, aromatherapy products and natural skincare.',
         'https://sg.hysses.com/',
         'https://goo.gl/maps/FY2cWFujqjW9MeNS9',
-        'https://lh3.ggpht.com/p/AF1QipP8yIh2GRJX7qsEqImWeNLVobPFPI31rhxwvrfL=s1536',
+        'https://cdn.shopify.com/s/files/1/0095/3745/4144/articles/Blog-Hysses_3500x.jpg?v=1544549325',
         array ['https://cdn.shopify.com/s/files/1/0095/3745/4144/products/essential-oil-essential-oil-bergamot-10ml-5202953273408_1800x.jpg?v=1643139712', 'https://www.capitaland.com/content/dam/capitaland-media-library/retail/Singapore/Singapore/Junction%208/tenant_storefront/HYSSES.jpg.transform/cap-midres/image.jpg'],
         current_timestamp - interval '4 second'
     ),
@@ -167,7 +167,7 @@ values (
         'Gryphon Tea Company traces its origins to a family-owned tea importer founded in Singapore almost 100 years ago. In 2006, a fourth-generation member of the family struck out on his own and the company quickly gained a following for its maverick ideas and heady enthusiasm. Gryphon Teas''s growing selection of tea recipes has received numerous industry awards and is now available to consumers worldwide through online shopping and our network of dedicated distribution partners.',
         'https://www.gryphontea.com/',
         null,
-        'https://scontent.fsin15-1.fna.fbcdn.net/v/t39.30808-6/327115658_520814699901511_268616325478005554_n.png?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=W4x28xTcGO0AX-9BHRP&_nc_ht=scontent.fsin15-1.fna&oh=00_AfCxD-Ts8d2eCBLhQ3JCPlOkAqhJ3hqfzEh-QshEptNpcA&oe=6464B1D7',
+        'https://images.glints.com/unsafe/glints-dashboard.s3.amazonaws.com/company-logo/32ac75a7a1b13cfd848c82ffed6f937a.png',
         array ['https://www.gryphontea.com/pub/media/homepage-slider-1.jpg', 'https://www.gryphontea.com/pub/media/homepage-summary-coldbrew.jpg'],
         current_timestamp - interval '5 second'
     ),
@@ -222,8 +222,8 @@ values (
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliqua',
         'https://example.com',
         null,
-        'https://picsum.photos/seed/10/500/500',
-        array ['https://picsum.photos/seed/11/500/500', 'https://picsum.photos/seed/12/500/500'],
+        'https://picsum.photos/seed/10/120/500',
+        array ['https://picsum.photos/seed/11/122/500', 'https://picsum.photos/seed/12/500/500'],
         current_timestamp - interval '10 second'
     ),
     (
@@ -233,7 +233,7 @@ values (
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliqua',
         'https://example.com',
         null,
-        'https://picsum.photos/seed/13/500/500',
+        'https://picsum.photos/seed/13/732/330',
         array ['https://picsum.photos/seed/14/500/500', 'https://picsum.photos/seed/15/500/500'],
         current_timestamp - interval '11 second'
     ),
@@ -244,7 +244,7 @@ values (
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliqua',
         'https://example.com',
         null,
-        'https://picsum.photos/seed/16/500/500',
+        'https://picsum.photos/seed/16/432/789',
         array ['https://picsum.photos/seed/17/500/500', 'https://picsum.photos/seed/18/500/500'],
         current_timestamp - interval '12 second'
     ),
@@ -255,11 +255,143 @@ values (
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliqua',
         'https://example.com',
         null,
-        'https://picsum.photos/seed/19/500/500',
-        array ['https://picsum.photos/seed/20/500/500', 'https://picsum.photos/seed/21/500/500'],
+        'https://picsum.photos/seed/19/347/683',
+        array ['https://picsum.photos/seed/20/323/564', 'https://picsum.photos/seed/21/764/233'],
         current_timestamp - interval '13 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 5',
+        'Random shop type 5',
+        'Integer ante nisl, aliquam sed dignissim cursus, pulvinar a lectus. Suspendisse varius est enim, a accumsan magna dignissim a. Maecenas dictum velit vitae tempor blandit. Cras laoreet justo nec nibh rutrum, vel varius purus ultricies. Nunc odio justo, maximus sit amet neque ut, lacinia euismod dui. Sed consectetur nisi id ex suscipit varius. Praesent nec blandit est. Proin porta nibh eget tempus suscipit. Aliquam erat volutpat.',
+        'https://example.com',
+        'https://goo.gl/maps/6Y5Y1Z4Z6Y5Y1Z4Z6',
+        'https://picsum.photos/seed/22/1100/200',
+        array ['https://picsum.photos/seed/23/434/323', 'https://picsum.photos/seed/24/675/564', 'https://picsum.photos/seed/25/344/788'],
+        current_timestamp - interval '14 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random very long shop branc name that is very loooooooooooooooooong',
+        'Random type that is also very long',
+        'Aliquam auctor ullamcorper nisl, sed lobortis nulla auctor in. Vivamus sit amet tellus non leo pharetra mollis. Vivamus eu sodales ante. Quisque et est eu arcu sodales maximus vel non mi. Vivamus nec purus sit amet velit maximus porta quis eget nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sem risus, tempus id nisl ut, laoreet tristique diam. Mauris pulvinar turpis id quam interdum suscipit. Cras sollicitudin ex neque, eu facilisis risus commodo ut. Nullam metus nunc, volutpat venenatis tincidunt sed, lacinia nec diam.',
+        'https://example.com',
+        'https://goo.gl/maps/6Y5Y1Z4Z6Y5Y1Z4Z6',
+        'https://picsum.photos/seed/26/200/1200',
+        array ['https://picsum.photos/seed/27/434/323', 'https://picsum.photos/seed/28/675/564', 'https://picsum.photos/seed/29/344/788'],
+        current_timestamp - interval '15 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 6',
+        'Random shop type 6',
+        'Ut at ex eget felis aliquam vulputate. Morbi imperdiet, est ut tristique convallis, lectus nulla tempor arcu, non elementum dolor arcu sed urna. Cras eget dui a risus aliquet viverra quis quis metus. Sed condimentum augue finibus sodales congue. Integer vehicula, magna vitae sagittis suscipit, odio dui aliquet eros, sed commodo lectus mauris tristique elit. Donec faucibus venenatis rutrum. Cras pharetra, odio a vulputate pretium, massa lacus malesuada nisl, non dictum velit magna ac enim. Integer tempus, erat at ultricies fringilla, lorem ligula interdum velit, sed dapibus orci metus lacinia magna. Nulla facilisi. Nunc lobortis molestie aliquam.',
+        'https://example.com',
+        'https://goo.gl/maps/6Y5Y1Z4Z6Y5Y1Z4Z6',
+        'https://picsum.photos/seed/30/230/899',
+        array ['https://picsum.photos/seed/31/434/323', 'https://picsum.photos/seed/32/675/564', 'https://picsum.photos/seed/33/344/788'],
+        current_timestamp - interval '15 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 7',
+        'Random shop type 7',
+        'Duis cursus odio sed dui mollis, non rhoncus turpis tincidunt. Aliquam dignissim nisi at metus scelerisque, non elementum nisl aliquet. Donec laoreet orci et velit dignissim, vitae fermentum lorem sagittis. Aenean vel augue luctus, iaculis purus et, pharetra felis. Vivamus sed velit tristique, ornare arcu in, sodales urna. Nullam nunc libero, sodales at tincidunt a, sagittis eget nunc. Nulla urna quam, condimentum id metus nec, tempor pulvinar sem. Fusce pharetra, leo non lobortis dapibus, velit turpis pretium est, a aliquet libero odio vel nulla. Curabitur mattis lorem vel tortor porttitor lacinia. Phasellus fringilla mi in venenatis varius. Nam cursus mattis ligula, at faucibus dolor vulputate vitae. Vivamus semper feugiat fermentum.',
+        'https://example.com',
+        'https://goo.gl/maps/6Y5Y1Z4Z6Y5Y1Z4Z6',
+        'https://picsum.photos/seed/34/809/202',
+        array ['https://picsum.photos/seed/35/1233/323', 'https://picsum.photos/seed/36/234/345', 'https://picsum.photos/seed/37/678/456'],
+        current_timestamp - interval '16 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 8',
+        'Random shop type 8',
+        'Sed euismod, nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl',
+        'https://example.com',
+        'https://goo.gl/maps/6Y5Y1Z4Z6Y5Y1Z4Z6',
+        'https://picsum.photos/seed/38/234/345',
+        array ['https://picsum.photos/seed/39/123/456', 'https://picsum.photos/seed/40/123/456', 'https://picsum.photos/seed/41/123/456'],
+        current_timestamp - interval '17 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 9',
+        'Random shop type 9',
+        'Sed euismod, nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl nisl eget ultricies ultrices, nunc nisl aliquam nunc, quis aliquet nisl',
+        'https://example.com',
+        null,
+        'https://picsum.photos/seed/42/123/456',
+        array ['https://picsum.photos/seed/43/123/456', 'https://picsum.photos/seed/44/123/456', 'https://picsum.photos/seed/45/123/456'],
+        current_timestamp - interval '17 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 10',
+        'Random shop type 10',
+        'Nam ultricies, felis in commodo sollicitudin, diam lectus gravida lacus, volutpat feugiat purus velit non nisl. Praesent non mollis ipsum. Pellentesque ultrices nibh mattis diam eleifend condimentum. Curabitur a fringilla leo, sed consequat nisi. Aenean imperdiet sollicitudin mi, ut cursus justo pulvinar at. Nunc urna sapien, cursus a scelerisque ac, lacinia eget purus. Quisque congue cursus nunc nec tincidunt. Etiam nec odio sit amet turpis tempor hendrerit. Donec facilisis nunc sem, non consequat nisl blandit ut. Praesent nec tristique augue, ut faucibus ante.',
+        'https://example.com',
+        null,
+        'https://picsum.photos/seed/46/423/783',
+        array ['https://picsum.photos/seed/47/678/456', 'https://picsum.photos/seed/48/348/934', 'https://picsum.photos/seed/49/892/234'],
+        current_timestamp - interval '18 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 11',
+        'Random shop type 11',
+        'Nam ultricies, felis in commodo sollicitudin, diam lectus gravida lacus, volutpat feugiat purus velit non nisl. Praesent non mollis ipsum. Pellentesque ultrices nibh mattis diam eleifend condimentum. Curabitur a fringilla leo, sed consequat nisi. Aenean imperdiet sollicitudin mi, ut cursus justo pulvinar at. Nunc urna sapien, cursus a scelerisque ac, lacinia eget purus. Quisque congue cursus nunc nec tincidunt. Etiam nec odio sit amet turpis tempor hendrerit. Donec facilisis nunc sem, non consequat nisl blandit ut. Praesent nec tristique augue, ut faucibus ante.',
+        'https://example.com',
+        null,
+        'https://picsum.photos/seed/50/423/783',
+        array ['https://picsum.photos/seed/51/678/456', 'https://picsum.photos/seed/52/348/934', 'https://picsum.photos/seed/53/892/234'],
+        current_timestamp - interval '19 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 12',
+        'Random shop type 12',
+        'Nunc molestie tortor non volutpat lobortis. Quisque vitae libero finibus justo placerat facilisis. Aliquam ut velit at nunc cursus tincidunt a non nisi. Proin porta sit amet nisi vitae feugiat. Curabitur sollicitudin accumsan turpis, sit amet fermentum turpis dictum et. Curabitur vel pharetra leo. Etiam id lacus magna. Etiam rutrum ut ligula eget porta. Donec nec mattis erat, at gravida mi. In rutrum lorem ac felis sodales, eu cursus libero consectetur. Ut laoreet eros molestie sollicitudin tincidunt.',
+        'https://example.com',
+        null,
+        'https://picsum.photos/seed/54/423/783',
+        array ['https://picsum.photos/seed/55/678/456', 'https://picsum.photos/seed/56/348/934', 'https://picsum.photos/seed/57/892/234'],
+        current_timestamp - interval '20 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'Random brand name 13',
+        'Random shop type 13',
+        'Nulla quam odio, auctor eu maximus nec, commodo consectetur lacus. Vivamus lacinia ligula eleifend est sodales euismod. Vestibulum pellentesque velit eu suscipit porta. Ut turpis lacus, congue a sapien id, malesuada auctor massa. Maecenas aliquam ex sit amet quam varius semper. Nullam dignissim egestas nibh ornare malesuada. In tristique risus ex, eu mollis neque dapibus sed.',
+        'https://example.com',
+        null,
+        'https://picsum.photos/seed/58/423/783',
+        array ['https://picsum.photos/seed/59/678/456', 'https://picsum.photos/seed/60/348/934', 'https://picsum.photos/seed/61/892/234'],
+        current_timestamp - interval '21 second'
     );
---
 UPDATE listings
 SET verified = true
-WHERE id IN (1, 2, 3, 4);
+WHERE id IN (
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+    );
