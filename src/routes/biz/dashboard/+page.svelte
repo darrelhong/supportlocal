@@ -25,7 +25,7 @@
   <p class="text-sm text-success">Successfully verified email</p>
 {/if}
 
-<div class="flex items-center justify-between p-2">
+<div class="mb-2 flex items-center justify-between">
   <h2 class="m-0">Your listings</h2>
   <a href="dashboard/create" class="btn-neutral btn">Create new listing</a>
 </div>
