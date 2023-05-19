@@ -22,6 +22,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>Support Local | Business</title>
+</svelte:head>
+
 <Layout>
   <slot />
 
