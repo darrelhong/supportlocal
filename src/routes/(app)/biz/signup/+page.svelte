@@ -44,11 +44,13 @@
     <input type="email" id="email" name="email" required class="input-custom w-full" />
   </div>
   <button class="btn-primary btn mt-4" class:loading>Get verify email link</button>
-  {#if errorMessage}
-    <p class="text-sm text-error">{errorMessage}</p>
-  {/if}
+  <p class="text-sm text-error">{errorMessage}</p>
 </form>
 
 <a href="/biz/login" class="mt-8 inline-block text-sm text-neutral"
   >Already have and account? Click here to sign in</a
 >
+<p class="text-xs text-error">
+  Note: While this project is in development phase, you can freely create an account and post
+  listings to test out the features
+</p>

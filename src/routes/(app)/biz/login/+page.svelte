@@ -53,3 +53,7 @@
 </form>
 
 <a href="/biz/signup" class="mt-8 inline-block text-sm text-neutral">Sign up as business owner</a>
+<p class="text-xs text-error">
+  Note: While this project is in development phase, you can freely create an account and post
+  listings to test out the features.
+</p>
