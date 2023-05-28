@@ -107,6 +107,28 @@ insert into listings (
     )
 values (
         'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'MONAN Pork Soup',
+        'Hawker stall',
+        'We have an innovative, uniquely Singapore taste to share! Fusing the taste of various Asian recipes that we localised to make it uniquely our very own, Singapore pork soup.',
+        'https://www.facebook.com/monanporksoup/',
+        'https://goo.gl/maps/8suud8Y71Jj76dcH9',
+        'https://live.staticflickr.com/65535/49413276712_cd8dce72ad_h.jpg',
+        array ['https://sethlui.com/wp-content/uploads/2020/04/MONAN-9.jpg', 'https://www.misstamchiak.com/wp-content/uploads/2020/01/monan-pork-soup.jpg'],
+        current_timestamp + interval '2 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
+        'WOKE Ramen @ Changi',
+        'Ramen restaurant',
+        'Singapore''s first-ever wok hei ramen is a cultural crossover between Japanese ramen broth and Chinese lamian noodles, presenting a bowl of delicious ramen noodle soup that is laced with ample wok hei smoke-kissed savouriness. For the uninitiated, wok hei literally translates to “breath of the wok”, a prized smokiness derived from cooking in an Asian bowed wok. WOKE''s noodles are first stir-fried in seasoned woks that singe them just right for that prized wok hei before being doused and served in hearty bowls of creamy chicken collagen and sweet prawn paste broths. The result is an unbeatable combination of smoke, depth and umami – a wonderful alchemy of culture, deliciousness and wok(e).',
+        'https://bit.ly/m/wokeramen',
+        'https://goo.gl/maps/ahEADhHHH4gjeUEP6',
+        'https://sgmagazine.com/wp-content/uploads/2023/02/Screenshot-2023-02-21-at-11.02.59-AM.png',
+        array ['https://live.staticflickr.com/65535/52715321608_26a36dd1a2_b.jpg', 'https://www.misstamchiak.com/wp-content/uploads/2023/04/DSCF8632-2048x1365.jpg'],
+        current_timestamp + interval '1 second'
+    ),
+    (
+        'b1a503db-0793-4f36-8b58-ac8af8c20648',
         'Natter Coffee & Gelato',
         'Gelato cafe',
         'Specialty cafe that offers coffee and artisanal gelatos with carefully crafted flavours.',
