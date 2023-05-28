@@ -9,8 +9,19 @@
 
 <h2 class="text-center">Discover your favourite local businesses</h2>
 
+<form class="flex justify-center" action="./">
+  <input
+    name="q"
+    class="input mb-6 mt-2 w-full max-w-md border-2 border-black text-base-content dark:border-white"
+    placeholder="Enter a search term e.g. 'coffee'"
+  />
+</form>
+
 {#if !listings}
   <p>Failed to load listings</p>
+{:else if listings.length === 0}
+  <h4>No listings found!</h4>
+  <a href="/">Home</a>
 {:else}
   <!-- listing grid -->
   <div class="not-prose grid gap-1.5 sm:grid-cols-2 sm:gap-y-3">
