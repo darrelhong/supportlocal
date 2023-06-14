@@ -1,20 +1,37 @@
 <script lang="ts">
   import { PUBLIC_SUPABASE_URL } from '$env/static/public';
   import type { PageData } from './$types';
+  import { page } from '$app/stores';
 
   export let data: PageData;
 
-  $: ({ listings, page } = data);
+  $: ({ listings, prevPageParams, nextPageParams } = data);
 </script>
 
 <h2 class="text-center">Discover your favourite local businesses</h2>
 
-<form class="flex justify-center" action="./">
-  <input
-    name="q"
-    class="input mb-6 mt-2 w-full max-w-md border-2 border-black text-base-content dark:border-white"
-    placeholder="Enter a search term e.g. 'coffee'"
-  />
+<form action="./">
+  <div class="flex justify-center">
+    <input
+      name="q"
+      value={$page.url.searchParams.get('q')}
+      class="input mb-6 mt-2 w-full max-w-md border-2 border-black text-base-content dark:border-white"
+      placeholder="Enter a search term e.g. 'coffee'"
+    />
+  </div>
+
+  <div class="flex py-2">
+    <select
+      class="select border-2 border-black bg-accent text-base-100 dark:border-white"
+      name="sort"
+      value={$page.url.searchParams.get('sort') ?? ''}
+    >
+      <option disabled selected value="">Sort by</option>
+      <option value="newest">Newest</option>
+      <option value="oldest">Oldest</option>
+    </select>
+    <button class="btn ml-auto" type="submit">Apply</button>
+  </div>
 </form>
 
 {#if !listings}
@@ -55,11 +72,11 @@
   </div>
   <!-- pagination -->
   <div class="mt-4 flex">
-    {#if page > 1}
-      <a href="?page={page - 1}" class="btn-secondary btn self-start">Prev page</a>
+    {#if prevPageParams}
+      <a href="?{prevPageParams}" class="btn-secondary btn self-start">Prev page</a>
     {/if}
-    {#if listings.length > 10}
-      <a href="?page={page + 1}" class="btn-accent btn ms-auto">Next page</a>
+    {#if nextPageParams}
+      <a href="?{nextPageParams}" class="btn-accent btn ms-auto">Next page</a>
     {/if}
   </div>
 {/if}
