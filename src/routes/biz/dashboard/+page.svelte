@@ -1,7 +1,5 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { page } from '$app/stores';
-  import { goto } from '$app/navigation';
   import { PUBLIC_SUPABASE_URL } from '$env/static/public';
   import type { PageData } from './$types';
 
@@ -9,14 +7,6 @@
 
   $: ({ session, listings } = data);
   $: ({ user } = session);
-
-  onMount(() => {
-    const params = $page.url.searchParams;
-    // remove signup param from url
-    params.delete('signup');
-    if (params.toString()) goto(`?${params.toString()}`);
-    else goto('dashboard');
-  });
 </script>
 
 <h3>{`${user.email}'s dashboard`}</h3>

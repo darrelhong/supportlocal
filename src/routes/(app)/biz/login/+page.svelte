@@ -28,7 +28,7 @@
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `${window.location.origin}/biz/logging-in`,
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
         shouldCreateUser: false
       }
     });
